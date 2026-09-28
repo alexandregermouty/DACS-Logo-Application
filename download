@@ -1,0 +1,11 @@
+# Never commit request data: registers, workspaces, review packs and responses contain personal data.
+*.xlsx
+*.xls
+*.csv
+DACS-logo-workspace_*.json
+DACS-logo-review-pack_*.json
+DACS-logo-response_*.json
+DACS-logo-register-update_*.xlsx
+DACS-logo-assessment-summary_*.xlsx
+.DS_Store
+Thumbs.db
