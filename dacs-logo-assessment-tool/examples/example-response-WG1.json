@@ -1,0 +1,18 @@
+{
+  "type": "dacs-logo-review-response",
+  "toolVersion": "1.0.0",
+  "packId": "WG1-20260928-1340-62y8",
+  "body": "WG1",
+  "reviewer": "WG1 lead (fictional example)",
+  "createdAt": "2026-09-28T13:40:56.567Z",
+  "reviews": [
+    {
+      "formId": 1,
+      "ref": "DACS-LOGO-2026-901",
+      "opinion": "Concur with conditions",
+      "text": "Fictional example. The network is a direct contribution to MG1.1.",
+      "conditions": "Fictional example. Data to be shared with the global inventory.",
+      "date": "2026-09-28T13:40:56.567Z"
+    }
+  ]
+}

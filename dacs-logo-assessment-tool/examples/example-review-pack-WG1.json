@@ -1,0 +1,91 @@
+{
+  "type": "dacs-logo-review-pack",
+  "toolVersion": "1.0.0",
+  "packId": "WG1-20260928-1340-62y8",
+  "body": "WG1",
+  "createdAt": "2026-09-28T13:40:54.617Z",
+  "from": "DACS Secretariat (fictional example)",
+  "due": "2026-10-12",
+  "note": "",
+  "personalDataIncluded": false,
+  "requests": [
+    {
+      "formId": 1,
+      "ref": "DACS-LOGO-2026-901",
+      "sub": {
+        "received": "2026-08-24",
+        "applicant": "",
+        "email": "",
+        "organisation": "Example Mountain Institute (fictional)",
+        "country": "Exampleland",
+        "levelRequested": "Not stated",
+        "typeOfUse": "Website",
+        "title": "EXAMPLE – Community snow observation network",
+        "description": "Fictional example. A network of volunteer observers records snow depth at 40 mountain sites and publishes the data openly on a project website.",
+        "link": "Fictional example. The observations feed national and regional snow inventories.",
+        "mgsDeclared": "MG1.1: Build a Global Cryosphere Monitoring Inventory; MG1.2: Enhance Monitoring Capabilities; MG5.3: Education and Capacity Building",
+        "placements": "Header of the project website.",
+        "startOfUse": "2026-10-01",
+        "url": "https://example.org",
+        "nonCommercial": "Yes",
+        "reuseLimitation": "",
+        "standards": "Yes",
+        "accuracy": "Confirmed"
+      },
+      "screen": {
+        "reviewer": "Secretariat focal point (example)",
+        "acknowledged": "Yes",
+        "completeness": "Complete",
+        "gates": {
+          "g1": "No",
+          "g2": "No",
+          "g3": "No",
+          "g4": "No"
+        }
+      },
+      "assess": {
+        "level": "Level 1",
+        "primaryOC": "OC1",
+        "mgs": [
+          "MG1.1",
+          "MG1.2"
+        ],
+        "scores": {
+          "c1": 5,
+          "c2": 4,
+          "c3": 4,
+          "c4": 4,
+          "c5": 4,
+          "c6": 4
+        },
+        "notes": "Fictional example. Clear contribution to the monitoring inventory; MG5.3 not retained."
+      },
+      "wg": {
+        "needed": "Yes",
+        "groups": [
+          "WG1"
+        ],
+        "several": false,
+        "sent": "2026-09-21",
+        "received": "",
+        "summary": ""
+      },
+      "reviews": [],
+      "decision": {
+        "final": "Pending",
+        "date": "",
+        "conditions": "",
+        "from": "",
+        "until": "",
+        "notified": ""
+      },
+      "follow": {
+        "status": "3 - With WG",
+        "action": "",
+        "owner": "",
+        "nextReview": ""
+      },
+      "log": []
+    }
+  ]
+}
