@@ -3,77 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- No data ever leaves the browser: network connections are forbidden by this policy. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="refresh" content="0; url=dacs-logo-assessment-tool/">
   <title>DACS logo assessment</title>
-  <meta name="description" content="Assessment of requests to use the logo of the Decade of Action for Cryospheric Sciences 2025-2034.">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="dacs-logo-assessment-tool/">
+  <style>body{font-family:Arial,sans-serif;background:#23315F;color:#fff;display:grid;place-items:center;min-height:100vh;margin:0}a{color:#8ED2EE}</style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#/" aria-label="DACS logo assessment - home">
-        <img src="assets/img/decade-logo-white.png" alt="Decade of Action for Cryospheric Sciences 2025-2034">
-        <span class="brand-divider" aria-hidden="true"></span>
-        <span class="brand-title"><b>Logo requests</b>Assessment and approval</span>
-      </a>
-      <span class="topbar-spacer"></span>
-      <button class="role-pill" id="rolePill" type="button" aria-haspopup="dialog" title="Change role and settings"></button>
-      <button class="icon-btn" id="themeBtn" type="button" title="Light or dark display" aria-label="Switch light or dark display"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
-      <span class="unesco-mark"><img src="assets/img/unesco-logo-white.png" alt="UNESCO"></span>
-    </div>
-    <div class="ring" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-  </header>
-  <nav class="nav" aria-label="Main">
-    <div class="nav-inner"><span id="navLinks" style="display:flex;gap:4px"></span><span class="save-state" id="saveState" aria-live="polite"></span></div>
-  </nav>
-
-  <main id="app" tabindex="-1"></main>
-
-  <div class="site-foot">
-    <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0 20 C 260 0, 520 10, 760 34 S 1200 70, 1440 44 L1440 90 L0 90 Z" fill="#8ED2EE"/>
-      <path d="M0 38 C 280 18, 540 26, 780 50 S 1210 84, 1440 62 L1440 90 L0 90 Z" fill="#EAEAEA"/>
-      <path d="M0 50 C 290 30, 560 38, 800 62 S 1220 92, 1440 74 L1440 90 L0 90 Z" fill="#3570A8"/>
-      <path d="M0 64 C 300 46, 580 54, 820 74 S 1230 98, 1440 86 L1440 90 L0 90 Z" fill="#23315F"/>
-    </svg>
-    <footer class="footer-band">
-      <div class="footer">
-        <div class="footer-logos"><img src="assets/img/decade-logo-white.png" alt="Decade of Action for Cryospheric Sciences 2025-2034"><span class="sep" aria-hidden="true"></span><img src="assets/img/unesco-logo-white.png" alt="UNESCO" style="height:26px"></div>
-        <span>Secretariat: UNESCO Intergovernmental Hydrological Programme · runs in your browser only, no data is uploaded · <a href="#/method">Methodology</a></span>
-      </div>
-    </footer>
-  </div>
-
-  <input type="file" id="filePicker" hidden>
-
-  <dialog id="roleDialog" aria-labelledby="roleTitle">
-    <form method="dialog">
-      <div class="dialog-body">
-        <h2 id="roleTitle">Role and settings</h2>
-        <p class="hint" style="margin-top:6px">The role sets what you can do in the tool. What you can <i>see</i> depends on the file you open: reviewers only ever receive the requests referred to them.</p>
-        <div class="role-options">
-          <label class="role-option"><input type="radio" name="role" value="secretariat"><span><b>UNESCO Secretariat</b><br><span class="hint">Administers the register: screening, scoring, referrals, review packs, decisions at Level 1, follow-up.</span></span></label>
-          <label class="role-option"><input type="radio" name="role" value="wg"><span><b>Working Group leadership</b> <select id="roleWG" style="margin-left:6px"><option>WG1</option><option>WG2</option><option>WG3</option><option>WG4</option><option>WG5</option></select><br><span class="hint">Concurrence at Level 1, substantive written opinion at Levels 2 and 3.</span></span></label>
-          <label class="role-option"><input type="radio" name="role" value="smc"><span><b>Strategic Management Committee</b><br><span class="hint">Decides at Level 2; recommends to the ESC at Level 3.</span></span></label>
-          <label class="role-option"><input type="radio" name="role" value="esc"><span><b>Executive Steering Committee</b><br><span class="hint">Decides on the flagship designation at Level 3.</span></span></label>
-        </div>
-        <label class="field" style="margin-top:14px">Your name (recorded in the history of each request)<input type="text" id="userName" autocomplete="name"></label>
-        <label style="display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:14px"><input type="checkbox" id="keepCopy" style="margin-top:3px"><span>Keep a working copy in this browser between visits<br><span class="hint">Untick on a shared computer. The workspace file you save remains the record.</span></span></label>
-        <button type="button" class="btn small danger" id="clearBrowser" style="margin-top:12px">Remove everything kept in this browser</button>
-      </div>
-      <div class="dialog-foot"><button class="btn" value="cancel">Cancel</button><button class="btn primary" value="ok">Apply</button></div>
-    </form>
-  </dialog>
-
-  <script src="assets/vendor/exceljs.min.js"></script>
-  <script src="assets/js/config.js"></script>
-  <script src="assets/js/model.js"></script>
-  <script src="assets/js/io.js"></script>
-  <script src="assets/js/demo-data.js"></script>
-  <script src="assets/js/app.js"></script>
+  <p>Opening the DACS logo assessment tool… <a href="dacs-logo-assessment-tool/">Continue</a></p>
 </body>
 </html>
